@@ -10,6 +10,19 @@ export class Phonebook extends Component {
     filter: '',
   };
 
+  componentDidMount() {
+    const contacts = localStorage.getItem('contacts');
+    const contactsParsed = JSON.parse(contacts);
+
+    if (contactsParsed) this.setState({ contacts: contactsParsed });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.contacts !== this.state.contacts) {
+      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+    }
+  }
+
   addContact = contact => {
     const contactToAdd = {
       ...contact,

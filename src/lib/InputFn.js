@@ -16,6 +16,7 @@ export function InputFn({
       <label className={css.label} htmlFor={id}>
         {titleNameInput}
         <input
+          autoComplete="off"
           className={css.input}
           type={type}
           placeholder={placeholder}
