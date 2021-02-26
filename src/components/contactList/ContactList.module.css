@@ -1,14 +1,19 @@
+ul {
+  max-width: 630px;
+}
+
 .contactListItem {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  min-width: 150px;
+  width: 200px;
   font-weight: 700;
   list-style: none;
   margin-bottom: 5px;
   margin-right: 10px;
-  background-color: rgb(156, 199, 241);
+  background-color: #9cc7f1;
+  border-radius: 4px;
 }
 
 .listItemContainer {
